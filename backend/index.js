@@ -3,7 +3,7 @@ const app = express();
 const routes = require('./routes/routes');
 
 // Ajustes
-app.set('port',3000);
+app.set('port',3001);
 
 // Middlewares
 app.use(express.json());
