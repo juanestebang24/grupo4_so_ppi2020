@@ -13,8 +13,9 @@ import Alfabeto from "./paginas/alfabeto";
 import Meses from "./paginas/Meses";
 import Animales from "./paginas/animales";
 import Colores from "./paginas/Colores";
-import  Saludos from "./paginas/saludos";
-import  palabras from "./paginas/palabras";
+import Saludos from "./paginas/saludos";
+import palabras from "./paginas/palabras";
+import Tutoriales from "./paginas/Tutoriales";
 import { Route, Switch, Redirect } from "react-router-dom";
 
 const App = () => {
@@ -36,6 +37,7 @@ const App = () => {
         <Route exact path="/paginas/Colores" component={Colores} />
         <Route exact path="/paginas/saludos" component={Saludos} />
         <Route exact path="/paginas/palabras" component={palabras} />
+        <Route exact path="/paginas/Tutoriales" component={Tutoriales} />
 
         <Redirect to="/" />
       </Switch>

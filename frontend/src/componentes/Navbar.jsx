@@ -17,6 +17,7 @@ export default class main extends Component {
               <Nav.Link href="/paginas/Login">Login</Nav.Link>
               <Nav.Link href="/paginas/Register">Register</Nav.Link>
               <Nav.Link href="/Menu">Señas</Nav.Link>
+              <Nav.Link href="/paginas/Tutoriales">Tutoriales</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Navbar>

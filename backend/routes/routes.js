@@ -14,18 +14,17 @@ router.get('/diccionario', (req, res) => {
     });
   });
 
-router.post('/nuevo-actor',(req,res)=>{
+router.post('/nueva-imagen',(req,res)=>{
 
-const {nombres,apellidos,correo,documento,telefono_celular,fecha_nacimiento,institucion_id} = req.body;
-let alumno = [nombres,apellidos,correo,documento,telefono_celular,fecha_nacimiento,institucion_id];
+const {nombre,cod_image,imagen} = req.body;
 
-let nuevoAlumno = `INSERT INTO actores(nombres,apellidos,correo,documento,telefono_celular,fecha_nacimiento,institucion_id)
-                  VALUES(?,?,?,?,?,?,?)`;
-mysqlConnection.query(nuevoAlumno, alumno, (err, results, fields) => {
-  if (err) {
-    return console.error(err.message);
-  }
-  res.json({ message:`Alumno matriculado`, })
+  mysqlConnection.query(`INSERT INTO Diccionario(nombre,Cod_image,imagen) VALUES('${nombre}','${cod_image}','${imagen}')`, (err, results, fields) => {
+    if (!err) {
+      res.json({ message:`Imagen agregada`, })
+    }
+    else {
+      console.log(err);
+    }
   });
 });  
 
