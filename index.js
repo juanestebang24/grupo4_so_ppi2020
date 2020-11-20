@@ -1,12 +1,16 @@
 const express = require('express');
 const app = express();
+const cors = require('cors');
 const routes = require('./routes/routes');
 
-// Ajustes
-app.set('port',3001);
+app.set('port', process.env.PORT || 3001);
 
-// Middlewares
+app.use(cors({origin: '*'}));
+//app.use(cors({origin: 'https://kuepj-3000.sse.codesandbox.io'}));
+
+
 app.use(express.json());
+
 
 // Routes//
 app.use('/api',routes);
