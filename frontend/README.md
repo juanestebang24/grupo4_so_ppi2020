@@ -1,2 +1,0 @@
-# lesco
-Created with CodeSandbox
