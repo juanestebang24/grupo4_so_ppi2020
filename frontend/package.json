@@ -10,6 +10,7 @@
   "dependencies": {
     "animate.css": "4.1.1",
     "aos": "2.3.4",
+    "axios": "^0.21.0",
     "bootstrap-datepicker": "1.9.0",
     "flaticon": "0.1.0",
     "icomoon": "1.0.0",
