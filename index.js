@@ -11,6 +11,9 @@ app.use(cors({origin: '*'}));
 
 app.use(express.json());
 
+app.get('/',(req,res)=>{
+  res.send('hi');
+})
 
 // Routes//
 app.use('/api',routes);
